@@ -36,6 +36,18 @@ if __name__ == "__main__":
     # .. and a big moving image for transformation
     moving_image_large = image_generator(100, 450, 100, 750)
 
+    # # Create a grid image
+    # size_x = 1000
+    # size_y = 1000
+    # gridSize = 23
+    #
+    # img = np.zeros((int(size_x), int(size_y)), dtype=np.float32)
+    # img[::gridSize, :] = 1
+    # img[:, ::gridSize] = 1
+    #
+    # moving_image_large = sitk.GetImageFromArray(img)
+
+
     # Elastix registration
     # Load the default parameter map
     elastix_image_filter = sitk.ElastixImageFilter()
